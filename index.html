@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Bevmartins Household Ventures</title>
-
-beverline onyango <beverlineonyango03@gmail.com>
-3:12 PM (0 minutes ago)
-to beverlineonyango1
-
 body {
     margin: 0;
     ...
@@ -54,6 +49,83 @@ body {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     font-size: 14px;
 }
+/* MOBILE RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    /* Header */
+    header {
+        padding: 15px 20px;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .logo img {
+        height: 75px;
+    }
+
+    nav {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 15px;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding: 20px 10px;
+        min-height: auto;
+    }
+
+    .hero-image {
+        width: 100%;
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* Sections */
+    .section {
+        padding: 50px 20px;
+    }
+
+    /* Collections */
+    .categories {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    /* Products */
+    .products-section {
+        padding: 50px 20px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .product-card img {
+        height: auto;
+        max-height: 350px;
+        object-fit: contain;
+    }
+
+    /* About */
+    .about-content {
+        padding: 0 10px;
+    }
+
+    /* Footer */
+    .footer {
+        padding: 35px 20px 20px;
+    }
+
+}
+
     <style>
         * {
             margin: 0;
