@@ -3,224 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Bevmartins Household Ventures</title>
-
+  <title>Bev Martins Household Ventures - Premium Home Essentials</title>
   <style>
-    * {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-}
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #FFFFFF;
+      color: #333;
+      line-height: 1.6;
+    }
 
-body {
-  background: #F8F8F8;
-}
+    /* HEADER */
+    header {
+      background: #0A1F44;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+    header h1 { font-size: 28px; margin-bottom: 5px; }
+    header p { font-size: 14px; opacity: 0.9; }
+    nav { margin-top: 15px; }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: 500;
+    }
+    nav a:hover { color: #D4AF37; }
 
-h1 {
-  text-align: center;
-  color: #0A1F44; /* Navy */
-  padding: 20px;
-}
+    /* HERO BANNER */
+    .hero {
+      background: linear-gradient(135deg, #0A1F44 0%, #1E3A6E 100%);
+      color: white;
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h1 { font-size: 42px; margin-bottom: 15px; }
+    .hero p { font-size: 18px; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; }
+    .shop-btn {
+      background: #D4AF37;
+      color: #0A1F44;
+      padding: 15px 30px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      display: inline-block;
+      font-size: 16px;
+    }
+    .shop-btn:hover { background: #C49F2A; }
 
-.product-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px;
-  max-width: 1200px;
-  margin: auto;
-}
-
-.product-card {
-  background: white;
-  border-radius: 12px;
-  padding: 15px;
-  box-shadow: 0 3px 8px rgba(0,0,0,0.1);
-  text-align: center;
-}
-
-.product-card img {
-  width: 100%;
-  height: 200px; /* This makes images small */
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.product-info h3 { 
-  font-size: 16px; 
-  color: #0A1F44;
-  margin: 10px 0 5px;
-}
-
-.price { 
-  font-size: 20px; 
-  font-weight: bold; 
-  color: #D4AF37; /* Gold */
-  margin: 5px 0;
-}
-
-.whatsapp-btn { 
-  background: #D4AF37; 
-  color: white; 
-  padding: 10px; 
-  border-radius: 8px; 
-  text-decoration: none; 
-  display: block; 
-  text-align: center; 
-  margin-top: 10px;
-  font-weight: bold;
-}
-
-footer { 
-  background: #0A1F44; 
-  color: white; 
-  text-align: center; 
-  padding: 20px; 
-  margin-top: 40px; 
-}
-* {
-  box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  color: #625B51;
-  background: #ffffff;
-}
-
-/* HEADER */
-header {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 15px 5%;
-  background: #ffffff;
-  border-bottom: 1px solid #eee;
-}
-
-/* LOGO */
-.logo img {
-  width: 150px;
-  height: auto;
-  display: block;
-}
-
-/* NAVIGATION */
-nav {
-  display: flex;
-  align-items: center;
-  gap: 25px;
-}
-
-nav a {
-  text-decoration: none;
-  color: #625B51;
-  font-size: 16px;
-  font-weight: 500;
-}
-
-nav a:hover {
-  text-decoration: underline;
-}
-
-  </style>
-</head>
-
-<body>
-
-  <!-- HEADER -->
-  <header>
-    <div class="logo">
-      <img src="41461.png" alt="Bevmartins Household Ventures Logo">
-    </div>
-
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#collections">Collections</a>
-      <a href="#products">Products</a>
-      <a href="#about">About</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
-.hero {
-  padding: 100px 20px;
-  background: #0A1F44;
-  color: white;
-  text-align: center;
-}
-
-.collections {
-  padding: 60px 20px;
-  background: #F8F9FA;
-}
-  <!-- OUR COLLECTIONS -->
-
-  </section>
-
-
-  <!-- ABOUT -->
-  <section id="about" class="about">
-
-    <div class="about-content">
-
-      <h2>About Bevmartins</h2>
-
-      <p>
-        Bevmartins Household Ventures brings together quality, elegance
-        and practicality to help you create a beautiful and comfortable
-        home. We offer a carefully selected range of household products
-        designed to suit modern living.
-      </p>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-
-    <h2>Let's Connect</h2>
-
-    <p>
-      Have a question or want to place an order?
-      We'd love to hear from you.
-    </p>
-
-    <a href="https://wa.me/254115192178" class="whatsapp-button">
-      Chat with us on WhatsApp
-    </a>
-
-  </section>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <h3>Bevmartins Household Ventures</h3>
-
-    <p>Fedha Estate, Church Road, Shop A21</p>
-
-    <p>Monday – Friday: 9:00 AM – 7:00 PM</p>
-
-    <p>Saturday: 10:00 AM – 4:00 PM</p>
-
-    <p>
-      WhatsApp:
-      <a href="https://wa.me/254115192178">
-        0115 192 178
-      </a>
-    </p>
-
-  </footer>
-
-</body>
-</html>
+    /* COLLECTIONS SECTION */
+    .collections {
