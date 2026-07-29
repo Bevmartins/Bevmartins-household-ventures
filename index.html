@@ -1,464 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Bevmartins Household Ventures</title>
+  <title>Bevmartins Household Ventures</title>
 
-beverline onyango <beverlineonyango03@gmail.com>
-3:26 PM (0 minutes ago)
-to beverlineonyango1
-
-<head>
-
-<style>
-
-    /* Your existing CSS */
-    body {
-        margin: 0;
-    }
-
-    /* Your other CSS */
-
-
-    /* Footer styling */
-    .footer {
-        background: #222;
-        color: #fff;
-        text-align: center;
-        padding: 40px 20px 20px;
-    }
-
-</style>
-
-</head>
-body {
-    margin: 0;
-    ...
-}
-/* MOBILE RESPONSIVE DESIGN */
-
-@media (max-width: 768px) {
-
-    /* Header */
-    header {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo img {
-        height: 75px;
-    }
-
-    nav {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 15px;
-    }
-
-    nav a {
-        font-size: 14px;
-    }
-
-    /* Hero */
-    .hero {
-        padding: 20px 10px;
-        min-height: auto;
-    }
-
-    .hero-image {
-        width: 100%;
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* Sections */
-    .section {
-        padding: 50px 20px;
-    }
-
-    /* Collections */
-    .categories {
-        grid-template-columns: 1fr;
-        gap: 20px;
-    }
-
-    /* Products */
-    .products-section {
-        padding: 50px 20px;
-    }
-
-    .products-grid {
-        grid-template-columns: 1fr;
-        gap: 25px;
-    }
-
-    .product-card img {
-        height: auto;
-        max-height: 350px;
-        object-fit: contain;
-    }
-
-    /* About */
-    .about-content {
-        padding: 0 10px;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 35px 20px 20px;
-    }
-
-}
-
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: Georgia, 'Times New Roman', serif;
-            background-color: #f8f5ef;
-            color: #29251f;
-        }
-
-        header {
-            background-color: #29251f;
-            color: #f8f5ef;
-            padding: 15px 8%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 24px;
-            font-weight: bold;
-            letter-spacing: 1px;
-        }
-
-.logo img {
-    height: 90px;
-    width: auto;
-    display: block;
-}
-        nav a {
-            color: #f8f5ef;
-            text-decoration: none;
-            margin-left: 25px;
-            font-size: 15px;
-        }
-
-        .hero {
-    min-height: 80vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 60px 20px;
-    background: linear-gradient(
-        rgba(255,255,255,0.85),
-        rgba(255,255,255,0.85)
-    );
-}
-
-.hero-image {
-    width: 100%;
-    max-width: 900px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-    border-radius: 12px;
-}
-} linear-gradient(
-                rgba(248, 245, 239, 0.92),
-                rgba(248, 245, 239, 0.92)
-            );
-        }
-
-        .hero-content {
-            max-width: 600px;
-        }
-
-        .hero h1 {
-            font-size: 40px;
-            line-height: 1.15;
-            margin-bottom: 15px;
-        }
-
-        .hero p {
-            font-size: 16px;
-            line-height: 1.5;
-            margin-bottom: 25px;
-            color: #625b51;
-        }
-
-        .button {
-            display: inline-block;
-            padding: 15px 32hero-image {
-    width: 100%;
-    max-width: 500px;
-    height: auto;
-    display: block;
-    margin: 0 auto 30px;
-    border-radius: 12px;
-}px;
-            background-color: #b08d57;
-            color: white;
-            text-decoration: none;
-            font-family: Arial, sans-serif;
-            font-weight: bold;
-            border-radius: 2px;
-            margin: 5px;
-        }
-
-        .button:hover {
-            opacity: 0.85;
-        }
-
-        .section {
-            padding: 80px 8%;
-            text-align: center;
-        }
-
-        .section h2 {
-            font-size: 36px;
-            margin-bottom: 15px;
-        }
-
-        .section-intro {
-            color: #6b645a;
-            margin-bottom: 45px;
-            font-family: Arial, sans-serif;
-        }
-
-        .categories {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 25px;
-        }
-
-        .category {
-            background-color: white;
-            padding: 40px 20px;
-            border: 1px solid #e4ddd2;
-        }
-
-        .category h3 {
-            margin-bottom: 10px;
-            font-size: 22px;
-        }
-
-        .category p {
-            color: #71695e;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
-
-        .about {
-            background-color: #29251f;
-            color: #f8f5ef;
-        }
-
-        .about p {
-            max-width: 700px;
-            margin: auto;
-            line-height: 1.8;
-            font-family: Arial, sans-serif;
-        }
-
-        footer {
-            background-color: #1c1a17;
-            color: #aaa39a;
-            text-align: center;
-            padding: 30px 20px;
-            font-family: Arial, sans-serif;
-            font-size: 14px;
-        }
-
-        @media (max-width: 768px) {
-            header {
-                flex-direction: column;
-                gap: 15px;
-            }
-
-            nav a {
-                margin: 0 8px;
-            }
-
-            .hero h1 {
-                font-size: 40px;
-            }
-
-            .hero p {
-                font-size: 17px;
-            }
-
-            .categories {
-                grid-template-columns: 1fr;
-            }
-        }
-    </style>
+  <style>
+    /* CSS will go here */
+  </style>
 </head>
 
-<body
+<body>
 
-<header>
+  <!-- HEADER -->
+  <header>
     <div class="logo">
-        <img src="41461.png" alt="Bevmartins Household Ventures Logo">
+      <img src="YOUR-LOGO-IMAGE-HERE" alt="Bevmartins Household Ventures Logo">
     </div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#collections">Collections</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
 
-<section class="hero" id="home">
-    <img src="41713.png" alt="Bevmartins Household Ventures" class="hero-image">
-</section>
+  <!-- HERO -->
+  <section id="home" class="hero">
+
+    <!-- Your hero image will go here -->
+    <img 
+      src="YOUR-HERO-IMAGE-HERE" 
+      alt="Bevmartins Household Ventures"
+      class="hero-image"
+    >
+
+  </section>
 
 
-    <section class="section" id="collections">
+  <!-- OUR COLLECTIONS -->
+  <section id="collections" class="collections">
 
-        <h2>Our Collections</h2>
+    <h2>Our Collections</h2>
 
-        <p class="section-intro">
-            Quality products for every corner of your home.
-        </p>
+    <p>Quality products for every corner of your home.</p>
 
-        <div class="categories">
+    <div class="collection-grid">
 
-            <div class="category">
-                <h3>Kitchen & Cookware</h3>
-                <p>
-                    Elegant cookware and practical kitchen essentials
-                    for everyday living.
-                </p>
-            </div>
+      <div class="collection-card">
+        <h3>Kitchen &amp; Cookware</h3>
+        <p>Elegant cookware and practical kitchen essentials for everyday living.</p>
+      </div>
 
-            <div class="category">
-                <h3>Dining & Dinnerware</h3>
-                <p>
-                    Beautiful dinner sets and dining essentials
-                    for memorable moments.
-                </p>
-            </div>
+      <div class="collection-card">
+        <h3>Dining &amp; Dinnerware</h3>
+        <p>Beautiful dinner sets and dining essentials for memorable moments.</p>
+      </div>
 
-            <div class="category">
-                <h3>Home Essentials</h3>
-                <p>
-                    Useful and stylish products designed to make
-                    your home more comfortable.
-                </p>
-            </div>
+      <div class="collection-card">
+        <h3>Home Essentials</h3>
+        <p>Useful and stylish products designed to make your home more comfortable.</p>
+      </div>
 
-            <div class="category">
-                <h3>Bedding</h3>
-                <p>
-                    Comfortable bedding and soft furnishings
-                    for a relaxing home.
-                </p>
-            </div>
+    </div>
 
-            <div class="category">
-                <h3>Luggage & Travel</h3>
-                <p>
-                    Stylish and reliable luggage for your
-                    journeys and everyday travel.
-                </p>
-            </div>
+  </section>
 
-            <div class="category">
-                <h3>New Arrivals</h3>
-                <p>
-                    Discover our latest products and
-                    special collections.
-                </p>
-            </div>
 
-        </div>
+  <!-- FEATURED PRODUCTS -->
+  <section id="products" class="products">
 
-    </section>
-<section id="products" class="products-section">
     <h2>Featured Products</h2>
+
     <p>Discover some of our best household essentials.</p>
 
-    <div class="products-grid">
+    <div class="product-grid">
 
-        <div class="product-card">
-            <img src="10040.jpg" alt="3-in-1 Canister Set">
+      <div class="product-card">
 
-            <div class="product-info">
-                <h3>3-in-1 Canister Set</h3>
-                <p>Elegant canister set for sugar, tea and coffee.</p>
-                <h4>KSh 3,000</h4>
+        <img 
+          src="YOUR-PRODUCT-IMAGE-HERE" 
+          alt="3-in-1 Canister Set"
+        >
 
-                <a href="https://wa.me/254115192178?text=Hello%20Bevmartins,%20I%20am%20interested%20in%20the%203-in-1%20Canister%20Set."
-                   class="whatsapp-btn">
-                    Order on WhatsApp
-                </a>
-            </div>
+        <div class="product-info">
+
+          <h3>3-in-1 Canister Set</h3>
+
+          <p>
+            Elegant canister set for sugar, tea and coffee.
+          </p>
+
+          <h4>Ksh 3,000</h4>
+
+          <a href="https://wa.me/254115192178" class="whatsapp-button">
+            Order on WhatsApp
+          </a>
+
         </div>
 
+      </div>
+
     </div>
-</section>
 
-    <section class="section about" id="about">
-
-        <h2>About Bevmartins</h2>
-
-        <p>
-            Bevmartins Household Ventures brings together quality,
-            elegance and practicality to help you create a beautiful
-            and comfortable home. We offer a carefully selected range
-            of household products designed to suit modern living.
-        </p>
-
-    </section>
+  </section>
 
 
-    <section class="section" id="contact">
+  <!-- ABOUT -->
+  <section id="about" class="about">
 
-        <h2>Let's Connect</h2>
+    <div class="about-content">
 
-        <p class="section-intro">
-            Have a question or want to place an order?
-            We'd love to hear from you.
-        </p>
+      <h2>About Bevmartins</h2>
 
-<a href="https://wa.me/254115192178?text=Hello%20Bevmartins,%20I%20would%20like%20to%20make%20an%20inquiry."
-   class="button">
+      <p>
+        Bevmartins Household Ventures brings together quality, elegance
+        and practicality to help you create a beautiful and comfortable
+        home. We offer a carefully selected range of household products
+        designed to suit modern living.
+      </p>
 
-    </section>
+    </div>
 
-<footer>
-    <p>Bevmartins Household Ventures</p>
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+      Have a question or want to place an order?
+      We'd love to hear from you.
+    </p>
+
+    <a href="https://wa.me/254115192178" class="whatsapp-button">
+      Chat with us on WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>Bevmartins Household Ventures</h3>
 
     <p>Fedha Estate, Church Road, Shop A21</p>
 
     <p>Monday – Friday: 9:00 AM – 7:00 PM</p>
+
     <p>Saturday: 10:00 AM – 4:00 PM</p>
 
     <p>
-        WhatsApp:
-        <a href="https://wa.me/254115192178">
-            0115 192 178
-        </a>
+      WhatsApp:
+      <a href="https://wa.me/254115192178">
+        0115 192 178
+      </a>
     </p>
 
-    <p>© 2026 Bevmartins Household Ventures. All rights reserved.</p>
-</footer>
+  </footer>
 
-
-    
 </body>
 </html>
