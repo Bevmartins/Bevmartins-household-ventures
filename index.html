@@ -3,55 +3,217 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Bev Martins Household Ventures - Premium Home Essentials</title>
+
+  <title>Bevmartins Household Ventures</title>
+
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    
-    body {
-      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-      background: #FFFFFF;
-      color: #333;
-      line-height: 1.6;
-    }
+    /* * {
+  box-sizing: border-box;
+}
 
-    /* HEADER */
-    header {
-      background: #0A1F44;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
-    header h1 { font-size: 28px; margin-bottom: 5px; }
-    header p { font-size: 14px; opacity: 0.9; }
-    nav { margin-top: 15px; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: 500;
-    }
-    nav a:hover { color: #D4AF37; }
+html {
+  scroll-behavior: smooth;
+}
 
-    /* HERO BANNER */
-    .hero {
-      background: linear-gradient(135deg, #0A1F44 0%, #1E3A6E 100%);
-      color: white;
-      text-align: center;
-      padding: 100px 20px;
-    }
-    .hero h1 { font-size: 42px; margin-bottom: 15px; }
-    .hero p { font-size: 18px; margin-bottom: 25px; max-width: 600px; margin-left: auto; margin-right: auto; }
-    .shop-btn {
-      background: #D4AF37;
-      color: #0A1F44;
-      padding: 15px 30px;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-      display: inline-block;
-      font-size: 16px;
-    }
-    .shop-btn:hover { background: #C49F2A; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #625B51;
+  background: #ffffff;
+}
 
-    /* COLLECTIONS SECTION */
-    .collections {
+/* HEADER */
+header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 5%;
+  background: #ffffff;
+  border-bottom: 1px solid #eee;
+}
+
+/* LOGO */
+.logo img {
+  width: 150px;
+  height: auto;
+  display: block;
+}
+
+/* NAVIGATION */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #625B51;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="logo">
+      <img src="41461" alt="Bevmartins Household Ventures Logo">
+    </div>
+
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#collections">Collections</a>
+      <a href="#products">Products</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+
+  <!-- HERO -->
+  <section id="home" class="hero">
+
+    <!-- 41713.png -->
+    <img 
+      src="YOUR-HERO-IMAGE-HERE" 
+      alt="Bevmartins Household Ventures"
+      class="hero-image"
+    >
+
+  </section>
+
+
+  <!-- OUR COLLECTIONS -->
+  <section id="collections" class="collections">
+
+    <h2>Our Collections</h2>
+
+    <p>Quality products for every corner of your home.</p>
+
+    <div class="collection-grid">
+
+      <div class="collection-card">
+        <h3>Kitchen &amp; Cookware</h3>
+        <p>Elegant cookware and practical kitchen essentials for everyday living.</p>
+      </div>
+
+      <div class="collection-card">
+        <h3>Dining &amp; Dinnerware</h3>
+        <p>Beautiful dinner sets and dining essentials for memorable moments.</p>
+      </div>
+
+      <div class="collection-card">
+        <h3>Home Essentials</h3>
+        <p>Useful and stylish products designed to make your home more comfortable.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- FEATURED PRODUCTS -->
+  <section id="products" class="products">
+
+    <h2>Featured Products</h2>
+
+    <p>Discover some of our best household essentials.</p>
+
+    <div class="product-grid">
+
+      <div class="product-card">
+
+        <img 
+          src="cannisters" 
+          alt="3-in-1 Canister Set"
+        >
+
+        <div class="product-info">
+
+          <h3>3-in-1 Canister Set</h3>
+
+          <p>
+            Elegant canister set for sugar, tea and coffee.
+          </p>
+
+          <h4>Ksh 3,000</h4>
+
+          <a href="https://wa.me/254115192178" class="whatsapp-button">
+            Order on WhatsApp
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+
+  <!-- ABOUT -->
+  <section id="about" class="about">
+
+    <div class="about-content">
+
+      <h2>About Bevmartins</h2>
+
+      <p>
+        Bevmartins Household Ventures brings together quality, elegance
+        and practicality to help you create a beautiful and comfortable
+        home. We offer a carefully selected range of household products
+        designed to suit modern living.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- CONTACT -->
+  <section id="contact" class="contact">
+
+    <h2>Let's Connect</h2>
+
+    <p>
+      Have a question or want to place an order?
+      We'd love to hear from you.
+    </p>
+
+    <a href="https://wa.me/254115192178" class="whatsapp-button">
+      Chat with us on WhatsApp
+    </a>
+
+  </section>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <h3>Bevmartins Household Ventures</h3>
+
+    <p>Fedha Estate, Church Road, Shop A21</p>
+
+    <p>Monday – Friday: 9:00 AM – 7:00 PM</p>
+
+    <p>Saturday: 10:00 AM – 4:00 PM</p>
+
+    <p>
+      WhatsApp:
+      <a href="https://wa.me/254115192178">
+        0115 192 178
+      </a>
+    </p>
+
+  </footer>
+
+</body>
+</html>
