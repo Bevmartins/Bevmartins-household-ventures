@@ -126,10 +126,37 @@ nav a:hover {
     <h2>Featured Products</h2>
 
     <p>Discover some of our best household essentials.</p>
+.products {
+  /* keep whatever is already here */
+}
 
-    <div class="product-grid">
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 25px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-      <div class="product-card">
+.product-card {
+  width: 100%;
+  max-width: 350px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.product-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  display: block;
+  border-radius: 10px;
+}
 
         <img 
           src="cannisters" 
