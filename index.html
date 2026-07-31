@@ -219,6 +219,45 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+    @media (max-width: 768px) {
+
+  header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+
+  .hero-image {
+    max-height: none;
+    width: 100%;
+    height: auto;
+  }
+
+  .collection-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-card {
+    max-width: 100%;
+  }
+
+  .products,
+  .collections,
+  .about,
+  .contact {
+    padding: 40px 5%;
+  }
+
+}
   </style>
 
 </head>
