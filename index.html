@@ -946,78 +946,64 @@ Order on WhatsApp
 
   </footer>
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+const searchInput = document.getElementById("productSearch");
+const products = document.querySelectorAll(".product-card");
 
-  const searchInput = document.getElementById("productSearch");
-  const products = document.querySelectorAll(".product-card");
+let selectedCategory = "all";
 
-  let selectedCategory = "all";
+function getProductCategory(product) {
+  const text = product.innerText.toLowerCase();
 
-  function getProductCategory(product) {
-    const text = product.innerText.toLowerCase();
-
-    if (
-      text.includes("cookware") ||
-      text.includes("pressure cooker")
-    ) {
-      return "cookware";
-    }
-
-    if (
-      text.includes("dinner") ||
-      text.includes("plate") ||
-      text.includes("cutlery")
-    ) {
-      return "dinnerware";
-    }
-
-    if (
-      text.includes("blender") ||
-      text.includes("airfryer") ||
-      text.includes("air fryer")
-    ) {
-      return "appliances";
-    }
-
-    return "kitchen";
+  if (text.includes("cookware") || text.includes("pressure cooker")) {
+    return "cookware";
   }
 
-  function showProducts() {
-
-    const searchText = searchInput.value.toLowerCase().trim();
-
-    products.forEach(function (product) {
-
-      const productText = product.innerText.toLowerCase();
-      const productCategory = getProductCategory(product);
-
-      const matchesSearch =
-        searchText === "" ||
-        productText.includes(searchText);
-
-      const matchesCategory =
-        selectedCategory === "all" ||
-        productCategory === selectedCategory;
-
-      if (matchesSearch && matchesCategory) {
-        product.style.display = "";
-      } else {
-        product.style.display = "none";
-      }
-
-    });
+  if (
+    text.includes("dinner") ||
+    text.includes("plate") ||
+    text.includes("cutlery")
+  ) {
+    return "dinnerware";
   }
 
-  // SEARCH
-  searchInput.addEventListener("input", showProducts);
+  if (
+    text.includes("blender") ||
+    text.includes("airfryer") ||
+    text.includes("air fryer")
+  ) {
+    return "appliances";
+  }
 
-  // CATEGORY BUTTONS
-  window.filterCategory = function (category) {
-    selectedCategory = category;
-    showProducts();
-  };
+  return "kitchen";
+}
 
-});
+function showProducts() {
+  const searchText = searchInput.value.toLowerCase().trim();
+
+  products.forEach(function(product) {
+    const productText = product.innerText.toLowerCase();
+    const category = getProductCategory(product);
+
+    const matchesSearch =
+      searchText === "" || productText.includes(searchText);
+
+    const matchesCategory =
+      selectedCategory === "all" || category === selectedCategory;
+
+    if (matchesSearch && matchesCategory) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+searchInput.addEventListener("input", showProducts);
+
+function filterCategory(category) {
+  selectedCategory = category;
+  showProducts();
+}
 </script>
 </body>
 </html>
