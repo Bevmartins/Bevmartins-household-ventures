@@ -945,6 +945,45 @@ Order on WhatsApp
     </p>
 
   </footer>
+<script>
 
+function getCategory(card) {
+  const text = card.innerText.toLowerCase();
+
+  if (
+    text.includes("cookware") ||
+    text.includes("pressure cooker")
+  ) {
+    return "cookware";
+  }
+
+  if (
+    text.includes("dinner") ||
+    text.includes("plate") ||
+    text.includes("cutlery")
+  ) {
+    return "dinnerware";
+  }
+
+  if (
+    text.includes("blender") ||
+    text.includes("airfryer") ||
+    text.includes("air fryer")
+  ) {
+    return "appliances";
+  }
+
+  return "kitchen";
+}
+
+
+function filterProducts() {
+  const searchInput = document.getElementById("productSearch");
+  const searchText = searchInput.value.toLowerCase().trim();
+
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach(function(product) {
+    const productTe…
 </body>
 </html>
