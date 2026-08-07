@@ -946,46 +946,63 @@ Order on WhatsApp
 
   </footer>
 <script>
-
-function getCategory(card) {
-  const text = card.innerText.toLowerCase();
-
-  if (
-    text.includes("cookware") ||
-    text.includes("pressure cooker")
-  ) {
-    return "cookware";
-  }
-
-  if (
-    text.includes("dinner") ||
-    text.includes("plate") ||
-    text.includes("cutlery")
-  ) {
-    return "dinnerware";
-  }
-
-  if (
-    text.includes("blender") ||
-    text.includes("airfryer") ||
-    text.includes("air fryer")
-  ) {
-    return "appliances";
-  }
-
-  return "kitchen";
-}
-
-
 function filterProducts() {
-
   const searchInput = document.getElementById("productSearch");
   const searchText = searchInput.value.toLowerCase().trim();
-
   const products = document.querySelectorAll(".product-card");
 
   products.forEach(function(product) {
+    const productText = product.innerText.toLowerCase();
 
-    const product…
+    if (productText.includes(searchText)) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+
+function filterCategory(category) {
+  const products = document.querySelectorAll(".product-card");
+
+  products.forEach(function(product) {
+    if (category === "all") {
+      product.style.display = "";
+      return;
+    }
+
+    const text = product.innerText.toLowerCase();
+
+    let productCategory = "kitchen";
+
+    if (
+      text.includes("cookware") ||
+      text.includes("pressure cooker")
+    ) {
+      productCategory = "cookware";
+    } 
+    else if (
+      text.includes("dinner") ||
+      text.includes("plate") ||
+      text.includes("cutlery")
+    ) {
+      productCategory = "dinnerware";
+    } 
+    else if (
+      text.includes("blender") ||
+      text.includes("airfryer") ||
+      text.includes("air fryer")
+    ) {
+      productCategory = "appliances";
+    }
+
+    if (productCategory === category) {
+      product.style.display = "";
+    } else {
+      product.style.display = "none";
+    }
+  });
+}
+</script>
 </body>
 </html>
