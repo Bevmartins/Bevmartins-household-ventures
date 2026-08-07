@@ -946,63 +946,78 @@ Order on WhatsApp
 
   </footer>
 <script>
-function filterProducts() {
+document.addEventListener("DOMContentLoaded", function () {
+
   const searchInput = document.getElementById("productSearch");
-  const searchText = searchInput.value.toLowerCase().trim();
   const products = document.querySelectorAll(".product-card");
 
-  products.forEach(function(product) {
-    const productText = product.innerText.toLowerCase();
+  let selectedCategory = "all";
 
-    if (productText.includes(searchText)) {
-      product.style.display = "";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
-
-function filterCategory(category) {
-  const products = document.querySelectorAll(".product-card");
-
-  products.forEach(function(product) {
-    if (category === "all") {
-      product.style.display = "";
-      return;
-    }
-
+  function getProductCategory(product) {
     const text = product.innerText.toLowerCase();
-
-    let productCategory = "kitchen";
 
     if (
       text.includes("cookware") ||
       text.includes("pressure cooker")
     ) {
-      productCategory = "cookware";
-    } 
-    else if (
+      return "cookware";
+    }
+
+    if (
       text.includes("dinner") ||
       text.includes("plate") ||
       text.includes("cutlery")
     ) {
-      productCategory = "dinnerware";
-    } 
-    else if (
+      return "dinnerware";
+    }
+
+    if (
       text.includes("blender") ||
       text.includes("airfryer") ||
       text.includes("air fryer")
     ) {
-      productCategory = "appliances";
+      return "appliances";
     }
 
-    if (productCategory === category) {
-      product.style.display = "";
-    } else {
-      product.style.display = "none";
-    }
-  });
-}
+    return "kitchen";
+  }
+
+  function showProducts() {
+
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    products.forEach(function (product) {
+
+      const productText = product.innerText.toLowerCase();
+      const productCategory = getProductCategory(product);
+
+      const matchesSearch =
+        searchText === "" ||
+        productText.includes(searchText);
+
+      const matchesCategory =
+        selectedCategory === "all" ||
+        productCategory === selectedCategory;
+
+      if (matchesSearch && matchesCategory) {
+        product.style.display = "";
+      } else {
+        product.style.display = "none";
+      }
+
+    });
+  }
+
+  // SEARCH
+  searchInput.addEventListener("input", showProducts);
+
+  // CATEGORY BUTTONS
+  window.filterCategory = function (category) {
+    selectedCategory = category;
+    showProducts();
+  };
+
+});
 </script>
 </body>
 </html>
