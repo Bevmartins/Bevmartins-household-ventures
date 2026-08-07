@@ -136,6 +136,22 @@ nav a:hover {
   background: #f8f5ef;
   border-radius: 12px;
   text-align: center;
+  text-decoration: none;
+  color: #625B51;
+  display: block;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.collection-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.10);
+}
+
+.collection-card span {
+  display: inline-block;
+  margin-top: 15px;
+  font-weight: bold;
+  color: #625B51;
 }
 
 .collection-card h3 {
@@ -418,24 +434,27 @@ footer a:hover {
 
     <p>Quality products for every corner of your home.</p>
 
-    <div class="collection-grid">
+ <div class="collection-grid">
 
-      <div class="collection-card">
-        <h3>Kitchen &amp; Cookware</h3>
-        <p>Elegant cookware and practical kitchen essentials for everyday living.</p>
-      </div>
+  <a href="#products" class="collection-card">
+    <h3>Kitchen &amp; Cookware</h3>
+    <p>Elegant cookware and practical kitchen essentials for everyday living.</p>
+    <span>View Products →</span>
+  </a>
 
-      <div class="collection-card">
-        <h3>Dining &amp; Dinnerware</h3>
-        <p>Beautiful dinner sets and dining essentials for memorable moments.</p>
-      </div>
+  <a href="#products" class="collection-card">
+    <h3>Dining &amp; Dinnerware</h3>
+    <p>Beautiful dinner sets and dining essentials for memorable moments.</p>
+    <span>View Products →</span>
+  </a>
 
-      <div class="collection-card">
-        <h3>Home Essentials</h3>
-        <p>Useful and stylish products designed to make your home more comfortable.</p>
-      </div>
+  <a href="#products" class="collection-card">
+    <h3>Home Essentials</h3>
+    <p>Useful and stylish products designed to make your home more comfortable.</p>
+    <span>View Products →</span>
+  </a>
 
-    </div>
+</div>
 
   </section>
 
@@ -795,8 +814,6 @@ Order on WhatsApp
   </div>
 
 </section>
-</section>
-
   <!-- ABOUT -->
   <section id="about" class="about">
 
