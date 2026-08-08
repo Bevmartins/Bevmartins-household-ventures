@@ -546,6 +546,7 @@ footer a:hover {
 
   <div class="category-buttons">
     <button onclick="filterCategory('all')">All</button>
+    <button onclick="filterCategory('offers')">🔥 Offers</button>
     <button onclick="filterCategory('cookware')">Cookware</button>
     <button onclick="filterCategory('dinnerware')">Dinner &amp; Tableware</button>
     <button onclick="filterCategory('appliances')">Appliances</button>
@@ -647,7 +648,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 6 -->
-<div class="product-card" data-category="cookware">
+<div class="product-card" data-category="cookware" data-offer="true">
   <img src="Tc nonstick" alt="Tc nonstick">
 
   <div class="product-info">
@@ -981,12 +982,15 @@ function showProducts() {
   products.forEach(function(product) {
     const productText = product.innerText.toLowerCase();
     const category = getProductCategory(product);
+    const isOffer = product.dataset.offer === "true";
 
     const matchesSearch =
       searchText === "" || productText.includes(searchText);
 
     const matchesCategory =
-      selectedCategory === "all" || category === selectedCategory;
+      selectedCategory === "all" ||
+      category === selectedCategory ||
+      (selectedCategory === "offers" && isOffer);
 
     if (matchesSearch && matchesCategory) {
       product.style.display = "";
@@ -995,7 +999,6 @@ function showProducts() {
     }
   });
 }
-
 searchInput.addEventListener("input", showProducts);
 
 function filterCategory(category) {
