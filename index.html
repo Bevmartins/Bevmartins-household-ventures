@@ -538,7 +538,7 @@ footer a:hover {
   <div class="product-grid">
 
     <!-- PRODUCT 1 -->
-    <div class="product-card">
+   <div class="product-card" data-category="kitchen">
       <img src="cannisters" alt="3-in-1 Canister Set">
 
       <div class="product-info">
@@ -555,7 +555,7 @@ footer a:hover {
 
 
     <!-- PRODUCT 2 -->
-    <div class="product-card">
+  <div class="product-card" data-category="dinnerware">
       <img src="ceramic plates" alt="6PCS Ceramic Plates Rose Design">
 
       <div class="product-info">
@@ -573,7 +573,7 @@ footer a:hover {
 
 
     <!-- PRODUCT 3 -->
-    <div class="product-card">
+  <div class="product-card" data-category="dinnerware">
       <img src="Gold ring Dinnerset" alt="24PCS Gold Rim Dinner Set">
 
       <div class="product-info">
@@ -593,7 +593,7 @@ Order on WhatsApp
 
 
     <!-- PRODUCT 4 -->
-    <div class="product-card">
+   <div class="product-card" data-category="dinnerware">
       <img src="24pcs gold cutlery set" alt="24PCS Gold Cutlery Set">
 
       <div class="product-info">
@@ -611,7 +611,7 @@ Order on WhatsApp
       </div>
     </div>
 <!-- PRODUCT 5 -->
-<div class="product-card">
+<div class="product-card" data-category="cookware">
   <img src="Bosch 11pcs cookware" alt="Bosch 11pcs cookware">
 
   <div class="product-info">
@@ -629,7 +629,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 6 -->
-<div class="product-card">
+<div class="product-card" data-category="cookware">
   <img src="Tc nonstick" alt="Tc nonstick">
 
   <div class="product-info">
@@ -647,7 +647,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 7 -->
-<div class="product-card">
+<div class="product-card" data-category="cookware">
   <img src="14pcs Aluminium cookware" alt="14pcs Aluminium cookware">
 
   <div class="product-info">
@@ -665,7 +665,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 8 -->
-<div class="product-card">
+<div class="product-card" data-category="cookware">
   <img src="Redberry 8pcs cookware" alt="Redberry 8pcs cookware">
 
   <div class="product-info">
@@ -683,7 +683,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 9 -->
-<div class="product-card">
+<div class="product-card" data-category="dinnerware">
  <img src="32pcs black gold dinner set" alt="32pcs black gold dinner set">
 
   <div class="product-info">
@@ -704,7 +704,7 @@ Order on WhatsApp
 </div>
 
 <!-- PRODUCT 10 -->
-<div class="product-card">
+<div class="product-card" data-category="dinnerware">
   <img src="24pcs white square dinnerset" alt="24pcs white square dinnerset">
 
   <div class="product-info">
@@ -722,7 +722,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 11 -->
-<div class="product-card">
+<div class="product-card" data-category="dinnerware">
   <img src="24pcs Japanese dinner set" alt="24pcs Japanese dinner set">
 
   <div class="product-info">
@@ -738,7 +738,7 @@ Order on WhatsApp
   </div>
 </div>
 <!-- PRODUCT 12 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Ailyons blender" alt="Ailyons blender">
 
   <div class="product-info">
@@ -756,7 +756,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 13 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Bosch 6ltrs pressure cooker" alt="Bosch 6ltrs pressure cooker">
 
   <div class="product-info">
@@ -774,7 +774,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 14 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Ailyons 6ltrs pressure cooker" alt="Ailyons 6ltrs pressure cooker">
 
   <div class="product-info">
@@ -792,7 +792,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 15 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Reki 6ltrs airfryer" alt="Reki 6ltrs airfryer">
 
   <div class="product-info">
@@ -810,7 +810,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 16 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Silvercrest 6ltrs airfryer" alt="Silvercrest 6ltrs airfryer">
 
   <div class="product-info">
@@ -828,7 +828,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 17 -->
-<div class="product-card">
+<div class="product-card" data-category="kitchen">
   <img src="12pcs silicone spoons" alt="12pcs silicone spoons">
 
   <div class="product-info">
@@ -846,7 +846,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 18 -->
-<div class="product-card">
+<div class="product-card" data-category="kitchen">
   <img src="19pcs silicone spoons" alt="19pcs silicone spoons">
 
   <div class="product-info">
@@ -864,7 +864,7 @@ Order on WhatsApp
 
 
 <!-- PRODUCT 19 -->
-<div class="product-card">
+<div class="product-card" data-category="appliances">
   <img src="Silvercrest blender" alt="Silvercrest blender">
 
   <div class="product-info">
@@ -951,29 +951,7 @@ const products = document.querySelectorAll(".product-card");
 let selectedCategory = "all";
 
 function getProductCategory(product) {
-  const text = product.innerText.toLowerCase();
-
-  if (text.includes("cookware") || text.includes("pressure cooker")) {
-    return "cookware";
-  }
-
-  if (
-    text.includes("dinner") ||
-    text.includes("plate") ||
-    text.includes("cutlery")
-  ) {
-    return "dinnerware";
-  }
-
-  if (
-    text.includes("blender") ||
-    text.includes("airfryer") ||
-    text.includes("air fryer")
-  ) {
-    return "appliances";
-  }
-
-  return "kitchen";
+  return product.dataset.category || "kitchen";
 }
 
 function showProducts() {
