@@ -643,7 +643,6 @@ footer a:hover {
 <script>
 
 const productData = [
-
   {
     name: "3-in-1 Canister Set",
     price: 3000,
@@ -651,7 +650,6 @@ const productData = [
     image: "cannisters",
     description: "Elegant canister set for sugar, tea and coffee."
   },
-
   {
     name: "6PCS Ceramic Dinner Plates - Rose Design",
     price: 1999,
@@ -659,7 +657,6 @@ const productData = [
     image: "ceramic plates",
     description: "Elegant 6-piece ceramic plate set with beautiful pink rose floral design."
   },
-
   {
     name: "24PCS Gold Rim Dinner Set",
     price: 5200,
@@ -667,7 +664,6 @@ const productData = [
     image: "Gold ring Dinnerset",
     description: "Elegant 24-piece dinner set with premium gold rim finish."
   },
-
   {
     name: "24PCS Gold Cutlery Set with Stand",
     price: 2300,
@@ -675,7 +671,6 @@ const productData = [
     image: "24pcs gold cutlery set",
     description: "Luxurious 24-piece gold stainless steel cutlery set with display stand."
   },
-
   {
     name: "Bosch 11pcs Cookware",
     price: 8500,
@@ -683,7 +678,6 @@ const productData = [
     image: "Bosch 11pcs cookware",
     description: "Quality 11-piece Bosch cookware set for everyday cooking."
   },
-
   {
     name: "Tc Nonstick",
     price: 7000,
@@ -693,7 +687,6 @@ const productData = [
     description: "Quality nonstick cookware set for convenient everyday cooking.",
     offer: true
   },
-
   {
     name: "14pcs Aluminium Cookware",
     price: 6500,
@@ -701,7 +694,6 @@ const productData = [
     image: "14pcs Aluminium cookware",
     description: "14-piece aluminium cookware set for your kitchen."
   },
-
   {
     name: "Redberry 8pcs Cookware",
     price: 5000,
@@ -709,7 +701,6 @@ const productData = [
     image: "Redberry 8pcs cookware",
     description: "Elegant 8-piece Redberry cookware set."
   },
-
   {
     name: "32pcs Black Gold Dinner Set",
     price: 10500,
@@ -717,7 +708,6 @@ const productData = [
     image: "32pcs black gold dinner set",
     description: "32-piece black gold dinner set including 6 cups, 6 saucers, 6 bowls, 6 side plates, 6 plates and 2 platters."
   },
-
   {
     name: "24pcs White Square Dinner Set",
     price: 6500,
@@ -725,7 +715,6 @@ const productData = [
     image: "24pcs white square dinnerset",
     description: "Elegant 24-piece white square dinner set."
   },
-
   {
     name: "24pcs Japanese Dinner Set",
     price: 4000,
@@ -733,7 +722,6 @@ const productData = [
     image: "24pcs Japanese dinner set",
     description: "Beautiful 24-piece Japanese dinner set."
   },
-
   {
     name: "Ailyons Blender",
     price: 2400,
@@ -741,7 +729,6 @@ const productData = [
     image: "Ailyons blender",
     description: "Quality Ailyons blender for your kitchen."
   },
-
   {
     name: "Bosch 6Ltrs Pressure Cooker",
     price: 5500,
@@ -749,7 +736,6 @@ const productData = [
     image: "Bosch 6ltrs pressure cooker",
     description: "6-litre Bosch pressure cooker for convenient everyday cooking."
   },
-
   {
     name: "Ailyons 6Ltrs Pressure Cooker",
     price: 6000,
@@ -757,7 +743,6 @@ const productData = [
     image: "Ailyons 6ltrs pressure cooker",
     description: "6-litre Ailyons pressure cooker for everyday cooking."
   },
-
   {
     name: "Reki 6Ltrs Air Fryer",
     price: 5500,
@@ -765,7 +750,6 @@ const productData = [
     image: "Reki 6ltrs airfryer",
     description: "6-litre Reki air fryer for convenient everyday cooking."
   },
-
   {
     name: "Silvercrest 6Ltrs Air Fryer",
     price: 5000,
@@ -773,7 +757,6 @@ const productData = [
     image: "Silvercrest 6ltrs airfryer",
     description: "6-litre Silvercrest air fryer for easy everyday cooking."
   },
-
   {
     name: "12pcs Silicone Spoons",
     price: 1800,
@@ -781,7 +764,6 @@ const productData = [
     image: "12pcs silicone spoons",
     description: "12-piece silicone spoon set for your kitchen."
   },
-
   {
     name: "19pcs Silicone Spoons",
     price: 2500,
@@ -789,7 +771,6 @@ const productData = [
     image: "19pcs silicone spoons",
     description: "19-piece silicone spoon set for your kitchen."
   },
-
   {
     name: "Silvercrest Blender",
     price: 3000,
@@ -797,14 +778,15 @@ const productData = [
     image: "Silvercrest blender",
     description: "Quality Silvercrest blender for your kitchen."
   }
-
 ];
-  const productGrid = document.getElementById("productGrid");
+
+const productGrid = document.getElementById("productGrid");
 const searchInput = document.getElementById("productSearch");
 
 let selectedCategory = "all";
 
 function displayProducts() {
+
   const searchText = searchInput.value.toLowerCase().trim();
 
   productGrid.innerHTML = "";
@@ -828,51 +810,60 @@ function displayProducts() {
     }
 
     const card = document.createElement("div");
+
     card.className = "product-card";
-
-    let priceHTML = "";
-
-    if (product.oldPrice) {
-      priceHTML += `
-        <p class="old-price">Ksh ${Number(product.oldPrice).toLocaleString()}</p>
-      `;
-    }
-
-    priceHTML += `
-      <p class="price">Ksh ${Number(product.price).toLocaleString()}</p>
-    `;
 
     let offerHTML = "";
 
     if (product.offer === true) {
-    offerHTML = '<span class="sale-badge">OFFER</span>;
+      offerHTML = '<span class="sale-badge">OFFER</span>';
     }
-const whatsappMessage =
-Hi Bevmartins, I want to order the ${product.name} - Ksh ${Number(product.price).toLocaleString()};
-    card.innerHTML = `
-      <img src="${product.image}" alt="${product.name}">
 
-      <div class="product-info">
+    let priceHTML = "";
 
-        ${offerHTML}
+    if (product.oldPrice) {
+      priceHTML +=
+        '<p class="old-price">Ksh ' +
+        Number(product.oldPrice).toLocaleString() +
+        '</p>';
+    }
 
-        <h3>${product.name}</h3>
+    priceHTML +=
+      '<p class="price">Ksh ' +
+      Number(product.price).toLocaleString() +
+      '</p>';
 
-        ${priceHTML}
+    const whatsappMessage =
+      "Hi Bevmartins, I want to order the " +
+      product.name +
+      " - Ksh " +
+      Number(product.price).toLocaleString();
 
-        <p>${product.description}</p>
+    card.innerHTML =
+      '<img src="' + product.image + '" alt="' + product.name + '">' +
 
-        <a
-          href="https://wa.me/254115192178?text=${encodeURIComponent(whatsappMessage)}"
-          class="whatsapp-button"
-          target="_blank">
-          Order on WhatsApp
-        </a>
+      '<div class="product-info">' +
 
-      </div>
-    `;
+      offerHTML +
+
+      '<h3>' + product.name + '</h3>' +
+
+      priceHTML +
+
+      '<p>' + product.description + '</p>' +
+
+      '<a href="https://wa.me/254115192178?text=' +
+      encodeURIComponent(whatsappMessage) +
+      '" class="whatsapp-button" target="_blank">' +
+
+      'Order on WhatsApp' +
+
+      '</a>' +
+
+      '</div>';
 
     productGrid.appendChild(card);
+
   });
 }
 
