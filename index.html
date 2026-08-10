@@ -577,7 +577,6 @@ footer a:hover {
  <div class="product-grid" id="productGrid">
   <!-- Products will be automatically generated here -->
 </div>
-  </div>
 
 </section>
   <!-- ABOUT -->
@@ -846,12 +845,10 @@ function displayProducts() {
     let offerHTML = "";
 
     if (product.offer === true) {
-      offerHTML = <span class="sale-badge">OFFER</span>;
+    offerHTML = '<span class="sale-badge">OFFER</span>;
     }
-
-    const whatsappMessage =
-      Hi Bevmartins, I want to order the ${product.name} - Ksh ${Number(product.price).toLocaleString()};
-
+const whatsappMessage =
+Hi Bevmartins, I want to order the ${product.name} - Ksh ${Number(product.price).toLocaleString()};
     card.innerHTML = `
       <img src="${product.image}" alt="${product.name}">
 
