@@ -574,7 +574,7 @@ footer a:hover {
   </div>
 
 </div>
-  <div class="product-grid" id="productGrid">
+ <div class="product-grid" id="productGrid">
   <!-- Products will be automatically generated here -->
 </div>
   </div>
@@ -800,6 +800,93 @@ const productData = [
   }
 
 ];
+  const productGrid = document.getElementById("productGrid");
+const searchInput = document.getElementById("productSearch");
+
+let selectedCategory = "all";
+
+function displayProducts() {
+  const searchText = searchInput.value.toLowerCase().trim();
+
+  productGrid.innerHTML = "";
+
+  productData.forEach(function(product) {
+
+    const productText =
+      product.name.toLowerCase() + " " +
+      product.description.toLowerCase();
+
+    const matchesSearch =
+      searchText === "" || productText.includes(searchText);
+
+    const matchesCategory =
+      selectedCategory === "all" ||
+      product.category === selectedCategory ||
+      (selectedCategory === "offers" && product.offer === true);
+
+    if (!matchesSearch || !matchesCategory) {
+      return;
+    }
+
+    const card = document.createElement("div");
+    card.className = "product-card";
+
+    let priceHTML = "";
+
+    if (product.oldPrice) {
+      priceHTML += `
+        <p class="old-price">Ksh ${Number(product.oldPrice).toLocaleString()}</p>
+      `;
+    }
+
+    priceHTML += `
+      <p class="price">Ksh ${Number(product.price).toLocaleString()}</p>
+    `;
+
+    let offerHTML = "";
+
+    if (product.offer === true) {
+      offerHTML = <span class="sale-badge">OFFER</span>;
+    }
+
+    const whatsappMessage =
+      Hi Bevmartins, I want to order the ${product.name} - Ksh ${Number(product.price).toLocaleString()};
+
+    card.innerHTML = `
+      <img src="${product.image}" alt="${product.name}">
+
+      <div class="product-info">
+
+        ${offerHTML}
+
+        <h3>${product.name}</h3>
+
+        ${priceHTML}
+
+        <p>${product.description}</p>
+
+        <a
+          href="https://wa.me/254115192178?text=${encodeURIComponent(whatsappMessage)}"
+          class="whatsapp-button"
+          target="_blank">
+          Order on WhatsApp
+        </a>
+
+      </div>
+    `;
+
+    productGrid.appendChild(card);
+  });
+}
+
+function filterCategory(category) {
+  selectedCategory = category;
+  displayProducts();
+}
+
+searchInput.addEventListener("input", displayProducts);
+
+displayProducts();
 
 </script>
 </body>
